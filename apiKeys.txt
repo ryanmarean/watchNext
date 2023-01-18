@@ -1,0 +1,26 @@
+The Movie Db:
+ec137f0d67e13942494bb5c368d4eb60
+
+uTelly API:
+var unirest = require("unirest");
+
+var req = unirest("GET", "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup");
+
+req.query({
+	"country": "us",
+	"source_id": "tt3398228",
+	"source": "imdb"
+});
+
+req.headers({
+	"x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
+	"x-rapidapi-key": "30c54e2166msh2a1fff058640638p188e78jsn4aac5bae0a90",
+	"useQueryString": true
+});
+
+
+req.end(function (res) {
+	if (res.error) throw new Error(res.error);
+
+	console.log(res.body);
+});
