@@ -14,7 +14,7 @@ req.query({
 
 req.headers({
 	"x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-	"x-rapidapi-key": "30c54e2166msh2a1fff058640638p188e78jsn4aac5bae0a90",
+	
 	"useQueryString": true
 });
 
